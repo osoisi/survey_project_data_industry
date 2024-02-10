@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Data Indsutry Survey by Alex Freberg.Dataset"
+    },
+    "byConnection": null
+  }
+}
