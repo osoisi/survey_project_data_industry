@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -19,7 +19,7 @@
   ],
   "sections": [
     {
-      "config": "{}",
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"207L\"}}}}}]}}",
       "displayName": "Page 1",
       "displayOption": 1,
       "filters": "[]",
@@ -27,40 +27,85 @@
       "name": "ReportSection",
       "visualContainers": [
         {
-          "config": "{\"name\":\"53dc1e13a38aed5812a3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.72644376899696,\"y\":61.276595744680854,\"z\":1,\"width\":245.10638297872342,\"height\":150.7598784194529,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(data_survery_normalised.survey_ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2},\"Name\":\"Min(data_survery_normalised.survey_ID)\",\"NativeReferenceName\":\"Number of People Surveyed\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2}}}]},\"columnProperties\":{\"Min(data_survery_normalised.survey_ID)\":{\"displayName\":\"Number of People Surveyed\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"059b656f7ac7d7816b44\",\"layouts\":[{\"id\":0,\"position\":{\"x\":737.643504531722,\"y\":145.01510574018127,\"z\":6001,\"width\":243.62537764350452,\"height\":181.75226586102718,\"tabOrder\":6001}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(data_survery_normalised.how_happy)\"}],\"MinValue\":[{\"queryRef\":\"Sum(data_survery_normalised.how_happy)1\"}],\"MaxValue\":[{\"queryRef\":\"Sum(data_survery_normalised.how_happy)2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"how_happy\"}},\"Function\":1},\"Name\":\"Sum(data_survery_normalised.how_happy)\",\"NativeReferenceName\":\"Average of how_happy\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"how_happy\"}},\"Function\":3},\"Name\":\"Sum(data_survery_normalised.how_happy)1\",\"NativeReferenceName\":\"Min of how_happy\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"how_happy\"}},\"Function\":4},\"Name\":\"Sum(data_survery_normalised.how_happy)2\",\"NativeReferenceName\":\"Max of how_happy\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"how_happy\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"target\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"calloutValue\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Happiness'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 150.76,
-          "width": 245.11,
-          "x": 9.73,
-          "y": 61.28,
-          "z": 1.00
+          "height": 181.75,
+          "width": 243.63,
+          "x": 737.64,
+          "y": 145.02,
+          "z": 6001.00
         },
         {
-          "config": "{\"name\":\"9a67174108c09b300555\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.72644376899696,\"y\":276.23100303951367,\"z\":3,\"width\":645.8358662613982,\"height\":382.24924012158056,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_survery_normalised.current_role\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"current_role\"},\"Name\":\"data_survery_normalised.current_role\",\"NativeReferenceName\":\"current_role\"}]},\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"53dc1e13a38aed5812a3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":274.5619335347432,\"y\":0,\"z\":1000,\"width\":127.6132930513595,\"height\":111.17824773413896,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(data_survery_normalised.survey_ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2},\"Name\":\"Min(data_survery_normalised.survey_ID)\",\"NativeReferenceName\":\"People Surveyed\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2}}}]},\"columnProperties\":{\"Min(data_survery_normalised.survey_ID)\":{\"displayName\":\"People Surveyed\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"38D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 382.25,
-          "width": 645.84,
-          "x": 9.73,
-          "y": 276.23,
-          "z": 3.00
+          "height": 111.18,
+          "width": 127.61,
+          "x": 274.56,
+          "y": 0.00,
+          "z": 1000.00
         },
         {
-          "config": "{\"name\":\"b12ca5b0c9630c417727\",\"layouts\":[{\"id\":0,\"position\":{\"x\":254.8328267477204,\"y\":61.276595744680854,\"z\":2,\"width\":245.10638297872342,\"height\":150.7598784194529,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(data_survery_normalised.age)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"age\"}},\"Function\":1},\"Name\":\"Sum(data_survery_normalised.age)\",\"NativeReferenceName\":\"Average of age\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"age\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"5ce69d8d9ebae23cd735\",\"layouts\":[{\"id\":0,\"position\":{\"x\":2.900302114803625,\"y\":119.87915407854985,\"z\":6000,\"width\":722.1752265861027,\"height\":363.50453172205437,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"data_survery_normalised.country\",\"active\":true}],\"Size\":[{\"queryRef\":\"Count(data_survery_normalised.survey_ID)\"}],\"Series\":[{\"queryRef\":\"data_survery_normalised.country\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"country\"},\"Name\":\"data_survery_normalised.country\",\"NativeReferenceName\":\"country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2},\"Name\":\"Count(data_survery_normalised.survey_ID)\",\"NativeReferenceName\":\"Count of People Surveyed\"}]},\"columnProperties\":{\"CountNonNull(data_survery_normalised.survey_ID)\":{\"displayName\":\"Count of People Surveyed\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"mapControls\":[{\"properties\":{\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showLassoButton\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'canvasLight'\"}}}}}],\"bubbles\":[{\"properties\":{\"bubbleSize\":{\"expr\":{\"Literal\":{\"Value\":\"21L\"}}}}}]}}}",
           "filters": "[]",
-          "height": 150.76,
-          "width": 245.11,
-          "x": 254.83,
-          "y": 61.28,
-          "z": 2.00
+          "height": 363.50,
+          "width": 722.18,
+          "x": 2.90,
+          "y": 119.88,
+          "z": 6000.00
         },
         {
-          "config": "{\"name\":\"c4fc29e7711885ee9969\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.72644376899696,\"y\":0,\"z\":0,\"width\":1270.273556231003,\"height\":61.276595744680854,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Data Industry Survey 2023\",\"textStyle\":{\"fontSize\":\"24pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "config": "{\"name\":\"79c1e99c5a841a38c202\",\"layouts\":[{\"id\":0,\"position\":{\"x\":573.2930513595165,\"y\":493.0513595166163,\"z\":4000,\"width\":706.7069486404833,\"height\":227.19033232628396,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_survery_normalised.current_role\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(data_survery_normalised.Avg_Salary)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"current_role\"},\"Name\":\"data_survery_normalised.current_role\",\"NativeReferenceName\":\"current_role\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Individual Average Salary (in Thousand $)\"}},\"Function\":1},\"Name\":\"CountNonNull(data_survery_normalised.Avg_Salary)\",\"NativeReferenceName\":\"Average of Individual Average Salary (in Thousand $)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Individual Average Salary (in Thousand $)\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 61.28,
-          "width": 1270.27,
-          "x": 9.73,
+          "height": 227.19,
+          "width": 706.71,
+          "x": 573.29,
+          "y": 493.05,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"8d93bbb0bbb14a4aed26\",\"layouts\":[{\"id\":0,\"position\":{\"x\":994.4690603514133,\"y\":326.60045836516423,\"z\":6003,\"width\":285.5309396485867,\"height\":157.4331550802139,\"tabOrder\":6003}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"data_survery_normalised.priority4next_role\"},{\"queryRef\":\"data_survery_normalised.survey_ID\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Priority for Next Role\"},\"Name\":\"data_survery_normalised.priority4next_role\",\"NativeReferenceName\":\"Priority for Next Role\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"data_survery_normalised.survey_ID\",\"NativeReferenceName\":\"Percentage of People Surveyed\"}]},\"columnProperties\":{\"data_survery_normalised.survey_ID\":{\"displayName\":\"Percentage of People Surveyed\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"88.3957219251337D\"}}}},\"selector\":{\"metadata\":\"data_survery_normalised.survey_ID\"}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"data_survery_normalised\"}},\"Property\":\"survey_ID\"}},\"Function\":2}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 157.43,
+          "width": 285.53,
+          "x": 994.47,
+          "y": 326.60,
+          "z": 6003.00
+        },
+        {
+          "config": "{\"name\":\"b12ca5b0c9630c417727\",\"layouts\":[{\"id\":0,\"position\":{\"x\":402.1752265861027,\"y\":0,\"z\":2000,\"width\":143.08157099697885,\"height\":111.17824773413896,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(data_survery_normalised.age)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"age\"}},\"Function\":1},\"Name\":\"Sum(data_survery_normalised.age)\",\"NativeReferenceName\":\"Average of age\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"age\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"38D\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"lockAspect\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 111.18,
+          "width": 143.08,
+          "x": 402.18,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b8ec73d7caa770247027\",\"layouts\":[{\"id\":0,\"position\":{\"x\":737.643504531722,\"y\":325.80060422960725,\"z\":6002,\"width\":243.62537764350452,\"height\":157.58308157099697,\"tabOrder\":6002}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(data_survery_normalised.upward_mobility)\"}],\"MinValue\":[{\"queryRef\":\"Min(data_survery_normalised.upward_mobility)\"}],\"MaxValue\":[{\"queryRef\":\"Sum(data_survery_normalised.upward_mobility)1\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"upward_mobility\"}},\"Function\":1},\"Name\":\"Sum(data_survery_normalised.upward_mobility)\",\"NativeReferenceName\":\"Average of upward_mobility\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"upward_mobility\"}},\"Function\":4},\"Name\":\"Sum(data_survery_normalised.upward_mobility)1\",\"NativeReferenceName\":\"Max of upward_mobility\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"upward_mobility\"}},\"Function\":3},\"Name\":\"Min(data_survery_normalised.upward_mobility)\",\"NativeReferenceName\":\"Min of upward_mobility\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"upward_mobility\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Upward Mobility'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 157.58,
+          "width": 243.63,
+          "x": 737.64,
+          "y": 325.80,
+          "z": 6002.00
+        },
+        {
+          "config": "{\"name\":\"c4fc29e7711885ee9969\",\"layouts\":[{\"id\":0,\"position\":{\"x\":2.900302114803625,\"y\":0,\"z\":0,\"width\":286.1631419939577,\"height\":106.34441087613293,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Data Industry Survey 2023\",\"textStyle\":{\"fontSize\":\"24pt\",\"textDecoration\":\"underline\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 106.34,
+          "width": 286.16,
+          "x": 2.90,
           "y": 0.00,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"de3971e737b941378325\",\"layouts\":[{\"id\":0,\"position\":{\"x\":2.900302114803625,\"y\":493.0513595166163,\"z\":5000,\"width\":543.3232628398791,\"height\":226.22356495468276,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Values\":[{\"queryRef\":\"Count(data_survery_normalised.survey_ID)\"}],\"Group\":[{\"queryRef\":\"data_survery_normalised.Preferred Programming Language or Tool\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2},\"Name\":\"Count(data_survery_normalised.survey_ID)\",\"NativeReferenceName\":\"Count of People Surveyed\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Preferred Programming Language or Tool\"},\"Name\":\"data_survery_normalised.Preferred Programming Language or Tool\",\"NativeReferenceName\":\"Preferred Programming Language or Tool\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"survey_ID\"}},\"Function\":2}}}]},\"columnProperties\":{\"Count(data_survery_normalised.survey_ID)\":{\"displayName\":\"Count of People Surveyed\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 226.22,
+          "width": 543.32,
+          "x": 2.90,
+          "y": 493.05,
+          "z": 5000.00
         }
       ],
       "width": 1280.00

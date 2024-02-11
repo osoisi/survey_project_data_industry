@@ -85,9 +85,14 @@
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Time"
               }
             ],
-            "dataType": "string",
+            "dataType": "dateTime",
+            "formatString": "Long Time",
             "lineageTag": "8779bfb4-dbda-4908-8883-ccafcdc66e96",
             "sourceColumn": "survey_time",
             "summarizeBy": "none"
@@ -146,17 +151,21 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Avg_Salary",
+            "name": "Individual Average Salary (in Thousand $)",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "string",
+            "dataType": "double",
             "lineageTag": "532df12d-4fb1-4f3b-a673-d7fdc626f5ec",
-            "sourceColumn": "Avg_Salary",
-            "summarizeBy": "none"
+            "sourceColumn": "Individual Average Salary (in Thousand $)",
+            "summarizeBy": "sum"
           },
           {
             "name": "industry2",
@@ -172,7 +181,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "prog_lang_or_tool",
+            "name": "Preferred Programming Language or Tool",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -181,7 +190,7 @@
             ],
             "dataType": "string",
             "lineageTag": "b9817d43-dc5c-41e8-a626-5ded4581a150",
-            "sourceColumn": "prog_lang_or_tool",
+            "sourceColumn": "Preferred Programming Language or Tool",
             "summarizeBy": "none"
           },
           {
@@ -282,20 +291,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "important4next_role",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "1544c4cf-0e52-4f56-92e4-6d078fba185f",
-            "sourceColumn": "important4next_role",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "priority4next_role",
+            "name": "Priority for Next Role",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -304,7 +300,7 @@
             ],
             "dataType": "string",
             "lineageTag": "7627f97a-35aa-42ad-bfd1-1c97d9fca1da",
-            "sourceColumn": "priority4next_role",
+            "sourceColumn": "Priority for Next Role",
             "summarizeBy": "none"
           },
           {
@@ -397,9 +393,12 @@
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Custom1\",{{\"salary_usd - Copy.1\", \"salary low\"}, {\"salary_usd - Copy.2\", \"salary high\"}, {\"survey_duration\", \"survey_duration_mins\"}}),",
                 "    #\"Removed Columns2\" = Table.RemoveColumns(#\"Renamed Columns\",{\"salary low\", \"salary high\"}),",
                 "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Removed Columns2\",{\"survey_ID\", \"surveyed_date\", \"survey_time\", \"survey_duration_mins\", \"current_role\", \"switched2data\", \"salary_usd\", \"Avg_Salary\", \"industry2\", \"prog_lang_or_tool\", \"how_happy\", \"work_life_balance\", \"enjoy_coworkers\", \"enjoy_management\", \"upward_mobility\", \"learning_new_things\", \"hard2enter_data\", \"important4next_role\", \"priority4next_role\", \"male_female\", \"age\", \"country\", \"education\", \"ethnicity\"}),",
-                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Reordered Columns\",{{\"how_happy\", Int64.Type}, {\"work_life_balance\", Int64.Type}, {\"enjoy_coworkers\", Int64.Type}, {\"enjoy_management\", Int64.Type}, {\"upward_mobility\", Int64.Type}, {\"learning_new_things\", Int64.Type}})",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Reordered Columns\",{{\"how_happy\", Int64.Type}, {\"work_life_balance\", Int64.Type}, {\"enjoy_coworkers\", Int64.Type}, {\"enjoy_management\", Int64.Type}, {\"upward_mobility\", Int64.Type}, {\"learning_new_things\", Int64.Type}, {\"survey_time\", type time}}),",
+                "    #\"Removed Columns3\" = Table.RemoveColumns(#\"Changed Type1\",{\"important4next_role\"}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Removed Columns3\",{{\"Avg_Salary\", type number}}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Changed Type2\",{{\"Avg_Salary\", \"Individual Average Salary (in Thousand $)\"}, {\"prog_lang_or_tool\", \"Preferred Programming Language or Tool\"}, {\"priority4next_role\", \"Priority for Next Role\"}})",
                 "in",
-                "    #\"Changed Type1\""
+                "    #\"Renamed Columns1\""
               ],
               "type": "m"
             }
