@@ -9,6 +9,14 @@
       {
         "name": "PBIDesktopVersion",
         "value": "2.124.2028.0 (23.12)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"data_survery_normalised\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
       }
     ],
     "culture": "en-GB",
@@ -23,6 +31,590 @@
           },
           "contentType": "json"
         }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-GB",
+    "tables": [
+      {
+        "name": "data_survery_normalised",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "survey_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "220eddfb-be64-4e34-91fc-5efee5082f2f",
+            "sourceColumn": "survey_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "surveyed_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "caa499a0-dc4a-4d18-add6-e70ae0783bd9",
+            "sourceColumn": "surveyed_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "survey_time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8779bfb4-dbda-4908-8883-ccafcdc66e96",
+            "sourceColumn": "survey_time",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "survey_duration_mins",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "62805def-d926-4770-977f-23fbafad15bf",
+            "sourceColumn": "survey_duration_mins",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "current_role",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "95f91bf7-6e0d-46f0-8442-34c5ca21626a",
+            "sourceColumn": "current_role",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "switched2data",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3e01c90-324c-475b-877b-3c3821842d55",
+            "sourceColumn": "switched2data",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "salary_usd",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b0febea-976d-4463-8158-6c0715f1ba61",
+            "sourceColumn": "salary_usd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Avg_Salary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "532df12d-4fb1-4f3b-a673-d7fdc626f5ec",
+            "sourceColumn": "Avg_Salary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "industry2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "52249bc0-79aa-431e-8677-426fff48313c",
+            "sourceColumn": "industry2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "prog_lang_or_tool",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b9817d43-dc5c-41e8-a626-5ded4581a150",
+            "sourceColumn": "prog_lang_or_tool",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "how_happy",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3af734a8-fffb-4375-9ce8-f560283e7d5c",
+            "sourceColumn": "how_happy",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "work_life_balance",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "489d0184-3e1c-4a38-97d3-7a8673c863a5",
+            "sourceColumn": "work_life_balance",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "enjoy_coworkers",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1175aeb0-4f36-4c4a-8dcd-eb4bad9e225a",
+            "sourceColumn": "enjoy_coworkers",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "enjoy_management",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2e8cdcb7-b41b-4e9f-b320-4aef3c06012c",
+            "sourceColumn": "enjoy_management",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "upward_mobility",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d31ce438-ccd9-4a7a-ad75-2b6104e08a70",
+            "sourceColumn": "upward_mobility",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "learning_new_things",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4c763729-6522-44f1-9bb9-1b579fa75c43",
+            "sourceColumn": "learning_new_things",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "hard2enter_data",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "798d1b07-6f18-48e2-837c-2adf8dfc304f",
+            "sourceColumn": "hard2enter_data",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "important4next_role",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1544c4cf-0e52-4f56-92e4-6d078fba185f",
+            "sourceColumn": "important4next_role",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "priority4next_role",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7627f97a-35aa-42ad-bfd1-1c97d9fca1da",
+            "sourceColumn": "priority4next_role",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "male_female",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bdd72f1e-3b1a-459e-887e-5b093e6dab47",
+            "sourceColumn": "male_female",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "age",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "51beaf6d-d7ce-427c-a7e7-6a6993fd26d8",
+            "sourceColumn": "age",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f7bd9acc-feba-448f-bc0a-285721bd24b9",
+            "sourceColumn": "country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ee65b74c-d6ae-458e-9d56-1448f40d1f82",
+            "sourceColumn": "education",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ethnicity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5f136abc-0cc5-4441-9459-90e7c2da758d",
+            "sourceColumn": "ethnicity",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "80ed35e3-7ff5-4420-b9a0-adef2542ae48",
+        "partitions": [
+          {
+            "name": "data_survery_normalised",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"localhost\\SQLEXPRESS\", \"data_industry_survey\"),",
+                "    dbo_data_survery_normalised = Source{[Schema=\"dbo\",Item=\"data_survery_normalised\"]}[Data],",
+                "    #\"Duplicated Column\" = Table.DuplicateColumn(dbo_data_survery_normalised, \"salary_usd\", \"salary_usd - Copy\"),",
+                "    #\"Split Column by Character Transition\" = Table.SplitColumn(#\"Duplicated Column\", \"salary_usd - Copy\", Splitter.SplitTextByCharacterTransition({\"0\"..\"9\"}, (c) => not List.Contains({\"0\"..\"9\"}, c)), {\"salary_usd - Copy.1\", \"salary_usd - Copy.2\", \"salary_usd - Copy.3\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Split Column by Character Transition\",\"k\",\"\",Replacer.ReplaceText,{\"salary_usd - Copy.2\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"-\",\"\",Replacer.ReplaceText,{\"salary_usd - Copy.2\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"+\",\"300\",Replacer.ReplaceText,{\"salary_usd - Copy.2\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Replaced Value2\",{\"salary_usd - Copy.3\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns\", \"Avg_salary\", each ([#\"salary_usd - Copy.1\"]+[#\"salary_usd - Copy.2\"])/2),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"salary_usd - Copy.1\", Int64.Type}, {\"salary_usd - Copy.2\", Int64.Type}, {\"Avg_salary\", Int64.Type}}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Changed Type\",{\"Avg_salary\"}),",
+                "    #\"Added Custom1\" = Table.AddColumn(#\"Removed Columns1\", \"Avg_Salary\", each ([#\"salary_usd - Copy.1\"]+[#\"salary_usd - Copy.2\"])/2),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Custom1\",{{\"salary_usd - Copy.1\", \"salary low\"}, {\"salary_usd - Copy.2\", \"salary high\"}, {\"survey_duration\", \"survey_duration_mins\"}}),",
+                "    #\"Removed Columns2\" = Table.RemoveColumns(#\"Renamed Columns\",{\"salary low\", \"salary high\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Removed Columns2\",{\"survey_ID\", \"surveyed_date\", \"survey_time\", \"survey_duration_mins\", \"current_role\", \"switched2data\", \"salary_usd\", \"Avg_Salary\", \"industry2\", \"prog_lang_or_tool\", \"how_happy\", \"work_life_balance\", \"enjoy_coworkers\", \"enjoy_management\", \"upward_mobility\", \"learning_new_things\", \"hard2enter_data\", \"important4next_role\", \"priority4next_role\", \"male_female\", \"age\", \"country\", \"education\", \"ethnicity\"}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Reordered Columns\",{{\"how_happy\", Int64.Type}, {\"work_life_balance\", Int64.Type}, {\"enjoy_coworkers\", Int64.Type}, {\"enjoy_management\", Int64.Type}, {\"upward_mobility\", Int64.Type}, {\"learning_new_things\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_78bc81fc-633d-4ac8-a01d-3ef5ef22fd8f",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "ce0226ba-d85a-4f14-a8df-8c206dfbad26",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "2c864481-9e81-4fce-ade0-c9b44fac4993",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "67e32884-432b-40fd-b549-2f99e4705f94",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "ec483e24-0c7d-455e-9b60-711d16d0a28c",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "0d22760e-dd4a-4dad-b03f-a451b4ad7f5b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "541982f6-7ffa-4ac3-bcee-9a77111b94d8",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "dbaa108e-7585-41ab-b3c0-3f1858128e65",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "e4d24f3a-ef5b-43ff-93fc-6667d301058a",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "c91189cb-f48b-4fe2-93c7-60eb0598dbe2",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "ab4c07b9-7b2c-4b23-9382-f8572e0373af",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "cc52f1fe-1d0b-4630-9ea7-9ec0b520295f",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "e6d20581-ece5-45f3-9dc1-ba1ce3450dee"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "175a444c-ec40-4485-917d-51bda459ce7f",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_78bc81fc-633d-4ac8-a01d-3ef5ef22fd8f",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
       }
     ]
   }

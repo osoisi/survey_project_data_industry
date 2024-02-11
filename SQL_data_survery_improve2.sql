@@ -1,4 +1,4 @@
-SELECT TOP (1000) [survey_ID]
+SELECT [survey_ID]
       ,[date_taken] AS when_taken_date
       ,[time_taken] AS when_taken_time
       ,[time_spent_mins]
