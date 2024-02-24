@@ -2,7 +2,7 @@
   "version": "1.0",
   "datasetReference": {
     "byPath": {
-      "path": "../Data Indsutry Survey by Alex Freberg.Dataset"
+      "path": "../Data Industry Survey.Dataset"
     },
     "byConnection": null
   }
