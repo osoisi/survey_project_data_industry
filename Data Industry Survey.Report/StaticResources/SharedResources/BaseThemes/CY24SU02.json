@@ -1,5 +1,5 @@
 {
-  "name": "CY23SU11",
+  "name": "CY24SU02",
   "dataColors": [
     "#118DFF",
     "#12239E",
@@ -305,6 +305,24 @@
         "trendline": [
           {
             "transparency": 20
+          }
+        ]
+      }
+    },
+    "cardVisual": {
+      "*": {
+        "layout": [
+          {
+            "maxTiles": 3
+          }
+        ]
+      }
+    },
+    "advancedSlicerVisual": {
+      "*": {
+        "layout": [
+          {
+            "maxTiles": 3
           }
         ]
       }

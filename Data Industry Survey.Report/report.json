@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleCityPark\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2},\"customTheme\":{\"name\":\"Storm\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -7,14 +7,14 @@
         "disabled": false,
         "items": [
           {
-            "name": "AccessibleCityPark",
-            "path": "BuiltInThemes/AccessibleCityPark.json",
-            "type": 201
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
           },
           {
-            "name": "CY23SU11",
-            "path": "BaseThemes/CY23SU11.json",
-            "type": 202
+            "name": "Storm",
+            "path": "BuiltInThemes/Storm.json",
+            "type": 201
           }
         ],
         "name": "SharedResources",
@@ -77,7 +77,7 @@
           "z": 5000.00
         },
         {
-          "config": "{\"name\":\"79c1e99c5a841a38c202\",\"layouts\":[{\"id\":0,\"position\":{\"x\":546.2686567164179,\"y\":131.6417910447761,\"z\":3000,\"width\":447.76119402985074,\"height\":588.3582089552239,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_survery_normalised.current_role\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(data_survery_normalised.Avg_Salary)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"current_role\"},\"Name\":\"data_survery_normalised.current_role\",\"NativeReferenceName\":\"current_role\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Individual Salary (000s)\"}},\"Function\":1},\"Name\":\"CountNonNull(data_survery_normalised.Avg_Salary)\",\"NativeReferenceName\":\"Average of Individual Salary (000s)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Individual Salary (000s)\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"switchAxisPosition\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average of Individual Salary'\"}}}}}]}}}",
+          "config": "{\"name\":\"79c1e99c5a841a38c202\",\"layouts\":[{\"id\":0,\"position\":{\"x\":546.2686567164179,\"y\":131.6417910447761,\"z\":3000,\"width\":447.76119402985074,\"height\":588.3582089552239,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"data_survery_normalised.current_role\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(data_survery_normalised.Avg_Salary)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"data_survery_normalised\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"current_role\"},\"Name\":\"data_survery_normalised.current_role\",\"NativeReferenceName\":\"current_role\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Individual Salary (000s)\"}},\"Function\":1},\"Name\":\"CountNonNull(data_survery_normalised.Avg_Salary)\",\"NativeReferenceName\":\"Average of Individual Salary (000s)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Individual Salary (000s)\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"switchAxisPosition\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"maxMarginFactor\":{\"expr\":{\"Literal\":{\"Value\":\"47L\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average of Individual Salary'\"}}}}}]}}}",
           "filters": "[]",
           "height": 588.36,
           "width": 447.76,
@@ -152,5 +152,5 @@
       "width": 1280.00
     }
   ],
-  "theme": "AccessibleCityPark"
+  "theme": "Storm"
 }

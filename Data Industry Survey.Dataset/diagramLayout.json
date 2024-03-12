@@ -10,14 +10,14 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
+            "x": 172,
             "y": 0
           },
           "nodeIndex": "data_survery_normalised",
           "nodeLineageTag": "80ed35e3-7ff5-4420-b9a0-adef2542ae48",
           "size": {
-            "height": 300,
-            "width": 234
+            "height": 681,
+            "width": 311
           },
           "zIndex": 0
         }
