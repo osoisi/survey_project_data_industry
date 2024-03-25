@@ -338,6 +338,7 @@
                 "value": "Automatic"
               }
             ],
+            "dataCategory": "Country",
             "dataType": "string",
             "lineageTag": "f7bd9acc-feba-448f-bc0a-285721bd24b9",
             "sourceColumn": "country",
