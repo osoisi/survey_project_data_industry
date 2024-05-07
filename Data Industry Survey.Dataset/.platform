@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Data Industry Survey"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1323ef4c-9130-46fc-abf6-677f4b6d6f82"
+  }
+}

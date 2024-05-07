@@ -1,5 +1,5 @@
 {
-  "compatibilityLevel": 1550,
+  "compatibilityLevel": 1567,
   "model": {
     "annotations": [
       {
@@ -8,11 +8,11 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.126.1261.0 (24.02)"
+        "value": "2.128.1380.0 (24.04)"
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"data_survery_normalised\"]"
+        "value": "[\"data_survery_normalised\",\"Roles\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -25,7 +25,6 @@
         "name": "en-GB",
         "linguisticMetadata": {
           "content": {
-            "DynamicImprovement": "HighConfidence",
             "Language": "en-US",
             "Version": "1.0.0"
           },
@@ -38,6 +37,15 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "3d3b1da8-d1b0-4237-8399-89a73b8cd3c1",
+        "fromColumn": "current_role",
+        "fromTable": "data_survery_normalised",
+        "toColumn": "current_role_old",
+        "toTable": "Roles"
+      }
+    ],
     "sourceQueryCulture": "en-GB",
     "tables": [
       {
@@ -119,7 +127,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "95f91bf7-6e0d-46f0-8442-34c5ca21626a",
             "sourceColumn": "current_role",
             "summarizeBy": "none"
@@ -397,9 +411,11 @@
                 "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Reordered Columns\",{{\"how_happy\", Int64.Type}, {\"work_life_balance\", Int64.Type}, {\"enjoy_coworkers\", Int64.Type}, {\"enjoy_management\", Int64.Type}, {\"upward_mobility\", Int64.Type}, {\"learning_new_things\", Int64.Type}, {\"survey_time\", type time}}),",
                 "    #\"Removed Columns3\" = Table.RemoveColumns(#\"Changed Type1\",{\"important4next_role\"}),",
                 "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Removed Columns3\",{{\"Avg_Salary\", type number}}),",
-                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Changed Type2\",{{\"Avg_Salary\", \"Individual Salary (000s)\"}, {\"prog_lang_or_tool\", \"Preferred Programming Language or Tool\"}, {\"priority4next_role\", \"Priority for Next Role\"}, {\"industry2\", \"industry\"}, {\"how_happy\", \"how happy with salary\"}, {\"hard2enter_data\", \"Ease to Enter Data\"}})",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Changed Type2\",{{\"Avg_Salary\", \"Individual Salary (000s)\"}, {\"prog_lang_or_tool\", \"Preferred Programming Language or Tool\"}, {\"priority4next_role\", \"Priority for Next Role\"}, {\"industry2\", \"industry\"}, {\"how_happy\", \"how happy with salary\"}, {\"hard2enter_data\", \"Ease to Enter Data\"}}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Renamed Columns1\",null,\"Still Learning\",Replacer.ReplaceValue,{\"Preferred Programming Language or Tool\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Value3\", each true)",
                 "in",
-                "    #\"Renamed Columns1\""
+                "    #\"Filtered Rows\""
               ],
               "type": "m"
             }
@@ -607,6 +623,69 @@
             "source": {
               "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
               "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Roles",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "current_role_old",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c90913a3-0c90-4b15-941e-7b2592b0f4f6",
+            "sourceColumn": "current_role_old",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Present Role",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "890b1179-d37e-406e-b35d-380a8aac3734",
+            "sourceColumn": "Present Role",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "32b2318e-cb73-4c8b-bf25-5e94a8436e0b",
+        "partitions": [
+          {
+            "name": "Roles",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = data_survery_normalised,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"survey_ID\", \"current_role\", \"industry\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Removed Other Columns\",{\"industry\", \"survey_ID\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Columns\"),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(#\"Removed Duplicates\", \"Present Role\", each if [current_role] = \"data architect or engineer\" then \"data engineer\" else if [current_role] = \"analytics engineer\" then \"data engineer\" else if [current_role] = \"data scientist or analyst\" then \"data analyst\" else if [current_role] = \"business intelligence\" then \"data analyst\" else if [current_role] = \"billing and operations specialist\" then \"support specialist\" else if [current_role] = \"support specialist\" then \"support specialist\" else if [current_role] = \"database admin\" then \"database manager\" else if [current_role] = \"database developer\" then \"database manager\" else if [current_role] = \"project or project management\" then \"project management\" else [current_role]),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Conditional Column\",{{\"current_role\", \"current_role_old\"}}),",
+                "    #\"Capitalized Each Word\" = Table.TransformColumns(#\"Renamed Columns\",{{\"Present Role\", Text.Proper, type text}})",
+                "in",
+                "    #\"Capitalized Each Word\""
+              ],
+              "type": "m"
             }
           }
         ]

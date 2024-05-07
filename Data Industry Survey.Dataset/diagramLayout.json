@@ -20,6 +20,19 @@
             "width": 311
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 628.43649815043159,
+            "y": 44.926633785450065
+          },
+          "nodeIndex": "Roles",
+          "nodeLineageTag": "32b2318e-cb73-4c8b-bf25-5e94a8436e0b",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

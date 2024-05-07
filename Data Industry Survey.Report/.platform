@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Data Industry Survey"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "db1d344b-4433-45a9-8649-f32d3c38ff51"
+  }
+}
